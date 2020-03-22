@@ -1,0 +1,10 @@
+pane	Daily	0	:sudo	1	:*	0	:/home/jason/SMWorkSpace	1	sudo	:sudo openvpn --config jason.zhu@seeingmachines.com__ssl_vpn_config.ovpn
+pane	Daily	0	:sudo	1	:*	1	:/home/jason	0	bash	:
+pane	Daily	0	:sudo	1	:*	2	:/home/jason/HomeWorkstation/GitHubSpace/todoist-linux	0	make	:make up
+pane	Daily	0	:sudo	1	:*	3	:/home/jason	0	bash	:
+pane	Daily	0	:sudo	1	:*	4	:/home/jason/SMWorkSpace	0	bash	:
+pane	Daily	0	:sudo	1	:*	5	:/home/jason	0	bash	:
+pane	Daily	1	:bash	0	:-	0	:/home/jason	1	bash	:
+window	Daily	0	1	:*	524a,373x72,0,0{186x72,0,0[186x35,0,0{95x35,0,0,0,90x35,96,0[90x17,96,0,6,90x17,96,18,8]},186x36,0,36,3],186x72,187,0[186x36,187,0,1,186x35,187,37,2]}
+window	Daily	1	0	:-	bc02,373x72,0,0,5
+state	Daily	

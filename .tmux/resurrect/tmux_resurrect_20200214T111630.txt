@@ -1,0 +1,4 @@
+pane	Daily	0	:[tmux]	1	:*Z	0	:/home/jason	0	htop	:htop
+pane	Daily	0	:[tmux]	1	:*Z	1	:/home/jason	1	python	:/home/jason/miniconda3/bin/python /home/jason/miniconda3/bin/s-tui
+window	Daily	0	1	:*Z	d710,185x72,0,0{92x72,0,0,0,92x72,93,0,2}
+state	Daily	

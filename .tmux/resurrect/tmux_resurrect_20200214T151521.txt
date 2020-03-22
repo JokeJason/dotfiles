@@ -1,0 +1,13 @@
+pane	1	0	:python	1	:*	0	:/home/jason	1	bash	:
+pane	Daily	1	:python3.7	0	:-	0	:/home/jason/SMWorkSpace	0	sudo	:sudo openvpn --config jason.zhu@seeingmachines.com__ssl_vpn_config.ovpn
+pane	Daily	1	:python3.7	0	:-	1	:/home/jason/HomeWorkstation/GitHubSpace/todoist-linux	0	make	:make up
+pane	Daily	1	:python3.7	0	:-	2	:/home/jason/SMWorkSpace	0	bash	:
+pane	Daily	1	:python3.7	0	:-	3	:/home/jason/SMWorkSpace	0	chronos	:/tmp/.mount_ChronoNZoJzD/chronos
+pane	Daily	1	:python3.7	0	:-	4	:/home/jason	0	htop	:htop
+pane	Daily	1	:python3.7	0	:-	5	:/home/jason/SMWorkSpace/CPT-680	1	python3.7	:/usr/bin/python3.7 -O /usr/bin/ranger
+pane	Daily	1	:python3.7	0	:-	6	:/home/jason	0	python	:/home/jason/miniconda3/bin/python /home/jason/miniconda3/bin/s-tui
+pane	Daily	3	:bash	1	:*	0	:/home/jason/SMWorkSpace/CPT-680	1	bash	:
+window	1	0	1	:*	bd00,185x72,0,0,3
+window	Daily	1	0	:-	2f12,373x72,0,0{186x72,0,0[186x36,0,0{140x36,0,0[140x18,0,0,4,140x17,0,19,9],45x36,141,0[45x18,141,0,8,45x17,141,19,10]},186x35,0,37,6],186x72,187,0[186x36,187,0,5,186x35,187,37,7]}
+window	Daily	3	1	:*	5e31,373x72,0,0,12
+state	Daily	

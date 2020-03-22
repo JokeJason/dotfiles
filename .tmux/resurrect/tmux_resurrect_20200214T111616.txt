@@ -1,0 +1,4 @@
+pane	Daily	0	:bash	1	:*	0	:/home/jason	0	htop	:htop
+pane	Daily	0	:bash	1	:*	1	:/home/jason	1	bash	:
+window	Daily	0	1	:*	d710,185x72,0,0{92x72,0,0,0,92x72,93,0,2}
+state	Daily	
