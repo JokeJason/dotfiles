@@ -124,7 +124,7 @@ mode "media" {
 }
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3). It will first combine general and local dotfiles, and then create a complete one 
-bindsym $super+Shift+r exec bash ~/.config/generate_config.sh, restart
+bindsym $super+Shift+r restart
 
 # exit i3
 bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
