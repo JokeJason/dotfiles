@@ -192,3 +192,4 @@ client.background           #2f343f
 
 # Lock Screen
 # bindsym $super+l exec i3lock -i <lock_screen>.png
+
