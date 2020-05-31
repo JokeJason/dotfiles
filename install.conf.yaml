@@ -22,3 +22,5 @@
       path: .tmux
     ~/.tmux.conf:
       path: .tmux.conf
+    ~/mediactrl.sh:
+      path: mediactrl.sh
