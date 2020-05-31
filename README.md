@@ -117,6 +117,32 @@ For GUI volumne controller, `pavucontrol` is a good choice
 1. Install `pavucontrol`
 2. Use `pavucontrol` to change volume
 
+#### 3.2.5 Adding media control for both playerctl and mpc (Added on 2020-05-31)
+
+After some tweeking, I'm starting to use *mopidy+ncmpcpp* as music player. Official Spotify (linux version) is still installed under my system. Just try to taste something different.
+
+There are many configuration tutorial online about Mopidy+Spotify+ncmpcpp, please refer them for detail. This README is just for i3wm rice (How to operate music player using keyboard only).
+
+After having both mopidy+ncmpcpp (which use Mopidy-MPD as backend) and Spotify app installed, my keyboard shortcut need adapt both applications. Spotify app can be controled using `playerctl` as shown in 3.2.2, mopidy can be controlled using `mpc` (ncmpcpp is just a TUI interface). Hence I created `mediactrl.sh` as a tool to play/pause/next/prev music on both software.
+
+If both Spotify and Mopidy(MPD) are running, `mediactrl.sh` will control Spotify. If there is only Mopidy is running, `mediactrl.sh` will control Mopidy using `mpc` command lines.
+
+Controlling Spotify via: following commands:
+
+```bash
+playerctl play-pause --player spotify
+playerctl next --player spotify
+playerctl previous --player spotify
+```
+
+Controlling Mopidy via following commands
+
+```bash
+mpc toggle
+mpc next
+mpc prev
+```
+
 ### 3.3 Screen backlight control using `xbacklight`
 
 Follow [backlight](https://wiki.archlinux.org/index.php/backlight), it will provide step by step guidance to use xbacklight on most setup\
