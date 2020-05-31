@@ -5,7 +5,10 @@
 # Spotify is controled using playerctl
 # Mopidy+ncmpcpp is controlled using mpc
 
-if [[ $(playerctl -l) == *"spotify"* ]]
+player_list=$(playerctl -l)
+mpd_status=$(mpc status) # This require MPD working (Mopidy or MPD working in backend)
+
+if [[ $player_list == *"spotify"* ]]
 then
     if [[ $1 == "play-pause" ]]
     then
@@ -17,26 +20,24 @@ then
     then
         playerctl previous --player spotify
     else
-        notify-send "Unknown argument given for mediactrl.sh"
+        notify-send "Unknown argument given for mediactrl.sh $1"
     fi
 
-elif [[ $(mpc status) == *"MPD error"* ]]
-then
-    notify-send "MPD not initiated"
-
+# # A else case, MPD (mopidy in my case) is assumed working in backend. Currently not working
+# elif [[ $mpd_status == *"MPD error"* ]]
+# then
+#     notify-send "MPD error"
 else
-    
-
     if [[ $1 == "play-pause" ]]
     then
-        if  [[ $(mpc status) == *"paused"* ]]
-        then
-            mpc play
-        elif [[ $(mpc status) == *""playing* ]]
-        then
-            mpc pause
-        else
-            notify-send "MPD status not clear"
-        fi
+        mpc toggle
+    elif [[ $1 == "next" ]]
+    then
+        mpc next
+    elif [[ $1 == "previous" ]]
+    then
+        mpc prev
+    else
+        notify-send "Unknown argument given for mediactrl.sh $1"
     fi
 fi
