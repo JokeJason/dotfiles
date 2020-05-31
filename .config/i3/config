@@ -123,6 +123,10 @@ mode "media" {
         bindsym Return mode "default"
 }
 
+# Backlight control
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3). It will first combine general and local dotfiles, and then create a complete one 
 bindsym $super+Shift+r restart
 
