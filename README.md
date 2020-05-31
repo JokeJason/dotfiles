@@ -166,4 +166,15 @@ All links have been set up to specific screen as follow:
 
 ```
 workspace $workspace1 output DP-2
-```
+
+
+## TODO
+
+* Write how to install Mopidy+Spotify+ncmpcpp on linux, and how to configure it, references:
+  * [Setting Up Mopidy, Ncmpcpp, and Spotify on Debian Stretch](https://wvarner.blogspot.com/2017/10/setting-up-mopidy-ncmpcpp-and-spotify.html)
+  * [mpd+ncmpcpp配置美化教程](https://blog.yangmame.org/mpd-ncmpcpp%E9%85%8D%E7%BD%AE%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B.html)
+  * [mopidy-spotify, Mopidy播放音乐的扩展](https://www.kutu66.com/GitHub/article_103304)
+  * [[不折腾会死][逆袭的Linux] Linux下最强播放器MPD主要介绍+使用体会](https://wingofikaros.tumblr.com/post/1396544631/mpd/amp)
+  * [Using Mopidy with Spotify and ncmpcpp](https://medium.com/@theos.space/using-mopidy-with-spotify-and-ncmpcpp-44352f4a2ce8)
+  * [Mopidy-Spotify GitHub](https://github.com/mopidy/mopidy-spotify)
+  * [Play and Visualize Spotify Music in Terminal with Mopidy and Ncmpcpp](https://brettinternet.com/blog/play-and-visual-spotify-music-in-terminal/)
