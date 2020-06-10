@@ -24,3 +24,5 @@
       path: .tmux.conf
     ~/mediactrl.sh:
       path: mediactrl.sh
+    ~/.config/ranger:
+      path: .config/ranger
