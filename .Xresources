@@ -7,26 +7,28 @@
 ! ---------------------------------------------------------
 
 !xterm*faceName: xft:mono:medium:size=10
-URxvt*font: xft:mono:medium:size=10
-URxvt*boldFont: xft:mono:bold:size=10
-URxvt*italicFont: xft:mono:italic:size=10
-URxvt*boldItalicFont: xft:mono:bold italic:size=8
+URxvt*font: 			xft:mono:medium:size=10
+URxvt*boldFont: 		xft:mono:bold:size=10
+URxvt*italicFont: 		xft:mono:italic:size=10
+URxvt*boldItalicFont: 		xft:mono:bold italic:size=8
 
 URxvt*letterSpace:		0
 URxvt.lineSpace:		0
 
+! URxvt general
+! Disable iso14755 mode (unicode input) to release Shift-Control
+URxvt.iso14755: 		false 
 URxvt*saveline:			15000
 URxvt*termName:			rxvt-256color
-URxvt*iso14755:			false
 URxvt*urgentOnBell:		true
-URxvt.mouseWheelScrollPage: False 
+URxvt.mouseWheelScrollPage: 	False 
 
 ! appearance
 URxvt*depth:			5
-URxvt*scrollBar:	     false	
-URxvt*scrollBar_right: true	
-URxvt*internalBorder:	5
-URxvt*externalBorder:	0
+URxvt*scrollBar:	     	false	
+URxvt*scrollBar_right: 		true	
+URxvt*internalBorder:		5
+URxvt*externalBorder:		0
 URxvt.geometry:			84x22
 
 ! allow filepaths to select as one, otherwise delimit
@@ -47,10 +49,11 @@ URxvt.keysym.C-equal: font-size:increase
 URxvt.keysym.C-minus: font-size:decrease
 URxvt.keysym.C-0:     font-size:reset
 
-! Extention: keyboard-select
+! Extension: keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keyboard-select.clipboard: true
 
-! Extention: tabbed color
+! Extension: tabbed color
 !URxvt.tabbed.tab-fg: 12
 !URxvt.tabbed.tab-bg: 0
 !URxvt.tabbed.tabbar-fg:4

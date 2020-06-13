@@ -50,6 +50,7 @@ Sometimes, problem will happen, need to refer to github page of these extensions
 
 * According to urxvt man page, `Meta` modifier (Alt) is denoted as `M` or `A`
 * Currently there are problems between coorperation of `tabbed` and `font-size`. Resizing font, will results displacement of character. Just need make fullscreen and comeback to refresh it. Everything will be fine 
+* Copy and Paste in urxvt: From urxvt 9.20, urxvt can support default clipbard copy paste via `Ctrl+Meta(Alt)+c/v` 
 
 ## Todo:
 
