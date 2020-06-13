@@ -16,6 +16,8 @@
       path: .config/dunst
     ~/.Xresources:
       path: .Xresources
+    ~/.Xresrouces.d:
+      path: .Xresources.d
     ~/.xsettingsd:
       path: .xsettingsd
     ~/.tmux:
