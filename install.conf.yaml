@@ -16,7 +16,7 @@
       path: .config/dunst
     ~/.Xresources:
       path: .Xresources
-    ~/.Xresrouces.d:
+    ~/.Xresources.d:
       path: .Xresources.d
     ~/.xsettingsd:
       path: .xsettingsd
