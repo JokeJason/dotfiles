@@ -161,7 +161,7 @@ bar {
 
 # window rules, you can find the window class using xprop
 for_window [class=".*"] border pixel 4
-assign [class=URxvt] $workspace1
+#assign [class=URxvt] $workspace1
 assign [class=Firefox|Transmission-gtk] $workspace2
 assign [class=Thunar|File-roller] $workspace3
 assign [class=Audacity|Vlc|mpv|Ghb|Xfburn|Gimp*|Inkscape] $workspace4
