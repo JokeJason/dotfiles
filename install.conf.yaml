@@ -26,3 +26,5 @@
       path: mediactrl.sh
     ~/.config/ranger:
       path: .config/ranger
+    ~/.urxvt:
+      path: .urxvt

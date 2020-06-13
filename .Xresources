@@ -39,76 +39,60 @@
 *.color7  : #e5e9f0
 *.color15 : #d1d5dc
 
-! ------------------------------------------------------------------------------
-! Font configuration
-! ------------------------------------------------------------------------------
-
-URxvt*font:				xft:M+ 1mn:regular:size=8
-URxvt*boldFont:			xft:M+ 1mn:bold:size=8
-URxvt*italicFont:		xft:M+ 1mn:italic:size=8
-URxvt*boldItalicFont:	xft:M+ 1mn:bold italic:size=8
-
-! ------------------------------------------------------------------------------
-! Xft Font Configuration
-! ------------------------------------------------------------------------------
-
-Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintslight
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
-
-! ------------------------------------------------------------------------------
+! ---------------------------------------------------------
 ! URxvt configs
-! ------------------------------------------------------------------------------
+! ---------------------------------------------------------
 
-! font spacing
+!xterm*faceName: xft:mono:medium:size=10
+URxvt*font: xft:mono:medium:size=10
+URxvt*boldFont: xft:mono:bold:size=10
+URxvt*italicFont: xft:mono:italic:size=10
+URxvt*boldItalicFont: xft:mono:bold italic:size=8
+
 URxvt*letterSpace:		0
 URxvt.lineSpace:		0
-! 
-! ! general settings
-! URxvt*saveline:			15000
-! URxvt*termName:			rxvt-256color
-! URxvt*iso14755:			false
-! URxvt*urgentOnBell:		true
-! 
-! appearance
-URxvt*depth:			24
-URxvt*scrollBar:		false
-! URxvt*scrollBar_right:	false
-! URxvt*internalBorder:	24
-! URxvt*externalBorder:	0
-! URxvt.geometry:			84x22
-! 
-! ! perl extensions
-! URxvt.perl-ext-common:	default,clipboard,url-select,keyboard-select
-! 
-! ! macros for clipboard and selection
-! URxvt.copyCommand:		xclip -i -selection clipboard
-! URxvt.pasteCommand:		xclip -o -selection clipboard
-! URxvt.keysym.M-c:		perl:clipboard:copy
-! URxvt.keysym.M-v:		perl:clipboard:paste
-! URxvt.keysym.M-C-v:		perl:clipboard:paste_escaped
-! URxvt.keysym.M-Escape:	perl:keyboard-select:activate
-! URxvt.keysym.M-s:		perl:keyboard-select:search
-! URxvt.keysym.M-u:		perl:url-select:select_next
-! URxvt.urlLauncher:		firefox
-! URxvt.underlineURLs:	true
-! URxvt.urlButton:		1     
-! 
-! ! scroll one line
-! URxvt.keysym.Shift-Up:		command:\033]720;1\007
-! URxvt.keysym.Shift-Down:	command:\033]721;1\007
-! 
-! ! control arrow
-! URxvt.keysym.Control-Up:	\033[1;5A
-! URxvt.keysym.Control-Down:	\033[1;5B
-! URxvt.keysym.Control-Right:	\033[1;5C
-! URxvt.keysym.Control-Left:	\033[1;5D
 
-! clear the scrollback
-URxvt.keysym.Control-l: command:\033c
+URxvt*saveline:			15000
+URxvt*termName:			rxvt-256color
+URxvt*iso14755:			false
+URxvt*urgentOnBell:		true
+URxvt.mouseWheelScrollPage: False 
+
+! appearance
+URxvt*depth:			5
+URxvt*scrollBar:	     false	
+URxvt*scrollBar_right: true	
+URxvt*internalBorder:	5
+URxvt*externalBorder:	0
+URxvt.geometry:			84x22
+
+! allow filepaths to select as one, otherwise delimit
+URxvt.cutchars: "\"(),<>[]{}|'`"
+
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,keyboard-select,tabbed,resize-font
+
+! Extension: matcher
+URxvt.url-launcher: sensible-browser 
+!URxvt.keysym.C-Delete: matcher:last
+URxvt.keysym.M-Delete: matcher:list
+URxvt.matcher.button: 1
+URxvt.matcher.rend.0: Uline Bold fg5
+URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
+
+! Extension: font-size
+URxvt.keysym.C-equal: font-size:increase
+URxvt.keysym.C-minus: font-size:decrease
+
+! Extention: keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+
+! Extention: tabbed color
+!URxvt.tabbed.tab-fg: 12
+!URxvt.tabbed.tab-bg: 0
+!URxvt.tabbed.tabbar-fg:4
+
+!URxvt.font:xft:Droid Sans Mono:size=9:style=Regular:antialias=true,xft:文泉驿等宽正黑:size=8:style=Regular:antialias=true
+!URxvt.boldfont:xft:Droid Sans Mono:size=9:style=BOld:antialias=true,xft:文泉驿等宽正黑:size=8:style=Bold:antialias=true
 
 ! ------------------------------------------------------------------------------
 ! Rofi configs
@@ -129,4 +113,4 @@ dmenu.selforeground:	    #d8dee9
 dmenu.background:	        #2e3440
 dmenu.selbackground:	    #bf616a
 dmenu.foreground:	        #d8dee9
-                                                           
+                                        

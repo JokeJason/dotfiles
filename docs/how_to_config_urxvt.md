@@ -44,3 +44,13 @@ Steps to install extensions:
 4. Add custom keybind shortcut in ~/.Xresources: `URxvt.keysym.<key e.g.F11>: perl:<extension>:switch`
 
 Sometimes, problem will happen, need to refer to github page of these extensions to debug
+
+## Tips
+
+* According to urxvt man page, `Meta` modifier (Alt) is denoted as `M` or `A`
+* Currently there are problems between coorperation of `tabbed` and `font-size`. Resizing font, will results displacement of character. Just need make fullscreen and comeback to refresh it. Everything will be fine 
+
+## Todo:
+
+* [ ] Understand [X Logical Font Description](https://wiki.archlinux.org/index.php/X_Logical_Font_Description) 
+* [ ] Understand how to enable ranger + image preview in urxvt
