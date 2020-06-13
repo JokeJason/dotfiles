@@ -39,7 +39,7 @@ Suggested resource from video: [Awesome urxvt](https://github.com/bookercodes/aw
 Steps to install extensions:
 
 1. Download urxvt extension perl files into correct place (e.g. wget URL) 
-2. Copy perl file into /usr/lib/urxvt/perl
+2. Copy perl file into `~/.urxvt/ext` 
 3. Edit ~/.Xresources, put extension in the comma separated list `URxvt.perl-ext-common: <extension1>, <extension2>`
 4. Add custom keybind shortcut in ~/.Xresources: `URxvt.keysym.<key e.g.F11>: perl:<extension>:switch`
 
