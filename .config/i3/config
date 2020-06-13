@@ -101,9 +101,9 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume $active_audio_sink -5%
 bindsym XF86AudioMute        exec pactl set-sink-mute $active_audio_sink toggle
 
 # Music Control with media key on keyboard (Check media.md in repo for installing/using programs)
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec bash ~/mediactrl.sh next
+bindsym XF86AudioPrev exec bash ~/mediactrl.sh previous
+bindsym XF86AudioPlay exec bash ~/mediactrl.sh play-pause
 
 # Media control using separate mode (for 60% keyboard)
 bindsym $super+m mode "media"
@@ -117,9 +117,9 @@ mode "media" {
         bindsym 5       exec pactl set-sink-volume $active_audio_sink 50%
         bindsym 4       exec pactl set-sink-volume $active_audio_sink 40%
         
-        bindsym Right exec playerctl next
-        bindsym Left  exec playerctl previous
-        bindsym space exec playerctl play-pause 
+        bindsym Right exec bash ~/mediactrl.sh next
+        bindsym Left  exec bash ~/mediactrl.sh previous
+        bindsym space exec bash ~/mediactrl.sh play-pause 
         bindsym Return mode "default"
 }
 
