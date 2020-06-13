@@ -25,10 +25,11 @@ Following are simple steps to configue urxvt:
 
 ### Colour Configuration
 
-urxvt support colour, but setting colour pattern is complicated. Here are two good resources: 
+urxvt support colour, but setting colour pattern is complicated. Here are few good resources: 
 
 * Others' dotfiles in unixporn
 * Base16 colour builder [base16-builder](https://github.com/base16-builder/base16-builder) which helps to create colour template 
+* Color Picker website [terminal.sexy](https://terminal.sexy)
 
 ## How to install Extensions for urxvt
 
@@ -54,3 +55,4 @@ Sometimes, problem will happen, need to refer to github page of these extensions
 
 * [ ] Understand [X Logical Font Description](https://wiki.archlinux.org/index.php/X_Logical_Font_Description) 
 * [ ] Understand how to enable ranger + image preview in urxvt
+* [ ] Separate all changable configuration into seperated files in `.Xresources.d/`

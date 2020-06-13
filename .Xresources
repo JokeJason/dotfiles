@@ -32,7 +32,7 @@ URxvt.geometry:			84x22
 ! allow filepaths to select as one, otherwise delimit
 URxvt.cutchars: "\"(),<>[]{}|'`"
 
-URxvt.perl-ext-common: default,matcher,selection-to-clipboard,keyboard-select,tabbed,resize-font
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard,keyboard-select,tabbed,font-size
 
 ! Extension: matcher
 URxvt.url-launcher: sensible-browser 
@@ -45,6 +45,7 @@ URxvt.matcher.pattern.1: \\bwww\\.[\\w-]+\\.[\\w./?&@#-]*[\\w/-]
 ! Extension: font-size
 URxvt.keysym.C-equal: font-size:increase
 URxvt.keysym.C-minus: font-size:decrease
+URxvt.keysym.C-0:     font-size:reset
 
 ! Extention: keyboard-select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
