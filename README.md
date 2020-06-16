@@ -117,6 +117,32 @@ For GUI volumne controller, `pavucontrol` is a good choice
 1. Install `pavucontrol`
 2. Use `pavucontrol` to change volume
 
+#### 3.2.5 Adding media control for both playerctl and mpc (Added on 2020-05-31)
+
+After some tweeking, I'm starting to use *mopidy+ncmpcpp* as music player. Official Spotify (linux version) is still installed under my system. Just try to taste something different.
+
+There are many configuration tutorial online about Mopidy+Spotify+ncmpcpp, please refer them for detail. This README is just for i3wm rice (How to operate music player using keyboard only).
+
+After having both mopidy+ncmpcpp (which use Mopidy-MPD as backend) and Spotify app installed, my keyboard shortcut need adapt both applications. Spotify app can be controled using `playerctl` as shown in 3.2.2, mopidy can be controlled using `mpc` (ncmpcpp is just a TUI interface). Hence I created `mediactrl.sh` as a tool to play/pause/next/prev music on both software.
+
+If both Spotify and Mopidy(MPD) are running, `mediactrl.sh` will control Spotify. If there is only Mopidy is running, `mediactrl.sh` will control Mopidy using `mpc` command lines.
+
+Controlling Spotify via: following commands:
+
+```bash
+playerctl play-pause --player spotify
+playerctl next --player spotify
+playerctl previous --player spotify
+```
+
+Controlling Mopidy via following commands
+
+```bash
+mpc toggle
+mpc next
+mpc prev
+```
+
 ### 3.3 Screen backlight control using `xbacklight`
 
 Follow [backlight](https://wiki.archlinux.org/index.php/backlight), it will provide step by step guidance to use xbacklight on most setup\
@@ -140,4 +166,15 @@ All links have been set up to specific screen as follow:
 
 ```
 workspace $workspace1 output DP-2
-```
+
+
+## TODO
+
+* Write how to install Mopidy+Spotify+ncmpcpp on linux, and how to configure it, references:
+  * [Setting Up Mopidy, Ncmpcpp, and Spotify on Debian Stretch](https://wvarner.blogspot.com/2017/10/setting-up-mopidy-ncmpcpp-and-spotify.html)
+  * [mpd+ncmpcpp配置美化教程](https://blog.yangmame.org/mpd-ncmpcpp%E9%85%8D%E7%BD%AE%E7%BE%8E%E5%8C%96%E6%95%99%E7%A8%8B.html)
+  * [mopidy-spotify, Mopidy播放音乐的扩展](https://www.kutu66.com/GitHub/article_103304)
+  * [[不折腾会死][逆袭的Linux] Linux下最强播放器MPD主要介绍+使用体会](https://wingofikaros.tumblr.com/post/1396544631/mpd/amp)
+  * [Using Mopidy with Spotify and ncmpcpp](https://medium.com/@theos.space/using-mopidy-with-spotify-and-ncmpcpp-44352f4a2ce8)
+  * [Mopidy-Spotify GitHub](https://github.com/mopidy/mopidy-spotify)
+  * [Play and Visualize Spotify Music in Terminal with Mopidy and Ncmpcpp](https://brettinternet.com/blog/play-and-visual-spotify-music-in-terminal/)
