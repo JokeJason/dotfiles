@@ -57,3 +57,32 @@ Sometimes, problem will happen, need to refer to github page of these extensions
 * [ ] Understand [X Logical Font Description](https://wiki.archlinux.org/index.php/X_Logical_Font_Description) 
 * [ ] Understand how to enable ranger + image preview in urxvt
 * [ ] Separate all changable configuration into seperated files in `.Xresources.d/`
+
+## Frequent Questions
+
+### tmux cannot be initiated on rxvt-unicode
+
+Q: Why `tmux` in urxvt will result in error: "open terminal failed: missing or unsuitable terminal: rxvt-256color"
+
+A: That's because the environment variable `$TERM` for urxvt is incorrect. You need check whether rxvt-256color is available within your terminfo database, and give it correct name
+
+Steps:
+
+1. Locate rxvt-unicode related compiled **terminfo** 
+   1. According to `man terminfo`, the terminfo database is available at `/etc/terminfo`. After my check there is only a REAMDE file overthere, which listed search path for terminfo command: `${HOME}/.terminfo`, `/etc/terminfo`, `/lib/terminfo` and last `/usr/share/terminfo`.
+   2. After search, the only available terminfo database in my laptop is within `/lib/terminfo`.
+   3. There `rxvt`, `rxvt-basic`, `rxvt-unicode`, and `rxvt-unicode-256-color`
+2. (If terminfo is located) Pick the name of file and put it in `.Xresources`, `URxvt*termName: rxvt-unicode-256-color` for my case, as I want 256 colour support
+3. (If terminfo database does not contain correct terminfo file for rxvt-unicode-256color, we need to program it according to [Fix Urxvt Terminfo](http://mfuchs.org/blog/fix-urxvt-terminfo/)
+   1. infocmp -L rxvt-unicode-256color -A <dir to terminfo database> > ~/urxvt.tic
+   2. tic urxvt.tic
+
+### Why `clear` in urxvt will return `database is inaccessible`
+
+Q: Why `clear` in urxvt will result in `terminals database is inaccessible`
+
+A: Because ncurses is looking for the compiled description of terminfo, but the database is not available within ncurses search path.
+
+Solution: according to `man terminfo`, ncurses will search `$HOME/.terminfo`. So just copy the terminfo database to there. This problem should be solved by `install.conf.yaml` already 
+
+

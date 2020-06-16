@@ -19,7 +19,7 @@ URxvt.lineSpace:		0
 ! Disable iso14755 mode (unicode input) to release Shift-Control
 URxvt.iso14755: 		false 
 URxvt*saveline:			15000
-URxvt*termName:			rxvt-256color
+URxvt*termName:			rxvt-unicode-256color
 URxvt*urgentOnBell:		true
 URxvt.mouseWheelScrollPage: 	False 
 

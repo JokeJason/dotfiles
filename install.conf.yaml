@@ -32,3 +32,5 @@
       path: .urxvt
     ~/.urxvt/ext/keyboard-select:
       path: urxvt-perls/keyboard-select
+    ~/.terminfo:
+      path: .terminfo
