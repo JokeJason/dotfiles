@@ -111,9 +111,9 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume $active_audio_sink -5%
 bindsym XF86AudioMute        exec pactl set-sink-mute $active_audio_sink toggle
 
 # Music Control with media key on keyboard (Check media.md in repo for installing/using programs)
-bindsym XF86AudioNext exec bash ~/mediactrl.sh next
-bindsym XF86AudioPrev exec bash ~/mediactrl.sh previous
-bindsym XF86AudioPlay exec bash ~/mediactrl.sh play-pause
+bindsym XF86AudioNext exec bash ~/scripts/mediactrl.sh next
+bindsym XF86AudioPrev exec bash ~/scripts/mediactrl.sh previous
+bindsym XF86AudioPlay exec bash ~/scripts/mediactrl.sh play-pause
 
 # Media control using separate mode (for 60% keyboard)
 bindsym $super+m mode "media"
@@ -142,6 +142,9 @@ bindsym $super+Shift+r restart
 
 # exit i3
 bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' -b 'Yes' 'i3-msg exit'"
+
+# systemctrl suspend
+bindsym $super+Shift+s exec systemctl suspend
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
