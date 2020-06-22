@@ -1,4 +1,9 @@
 ############################ GENERAL for all platform #############################
+
+# i3-gaps
+gaps inner 10
+gaps outer 5
+
 # set modifier
 set $super Mod4
 set $alt Mod1
@@ -35,6 +40,11 @@ bindsym $super+Left focus left
 bindsym $super+Down focus down
 bindsym $super+Up focus up
 bindsym $super+Right focus right
+
+bindsym $super+h focus left
+bindsym $super+j focus down
+bindsym $super+k focus up
+bindsym $super+l focus right
 
 # move focused window
 bindsym $super+Shift+Left move left
@@ -139,9 +149,43 @@ mode "resize" {
         bindsym Down resize grow height 5 px or 5 ppt
         bindsym Up resize shrink height 5 px or 5 ppt
         bindsym Right resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
         bindsym Return mode "default"
 }
 bindsym $super+r mode "resize"
+
+# set gaps
+mode "gaps" {
+	bindsym i	gaps inner current plus 5
+	bindsym Shift+i gaps inner current minus 5
+
+	bindsym o	gaps outer current plus 5
+	bindsym Shift+o gaps outer current minus 5
+
+	bindsym h	gaps horizontal current plus 5
+	bindsym Shift+h gaps horizontal current minus 5
+
+	bindsym v	gaps vertical current plus 5
+	bindsym Shift+v gaps vertical current minus 5
+
+	bindsym t	gaps top current plus 5
+	bindsym Shift+t gaps top current minus 5
+
+	bindsym r	gaps right current plus 5
+	bindsym Shift+r gaps right current minus 5
+
+	bindsym b	gaps bottom current plus 5
+	bindsym Shift+b gaps bottom current minus 5
+
+	bindsym l	gaps left current plus 5
+	bindsym Shift+b gaps left current minus 5
+	
+	bindsym Return mode "default"
+}
+bindsym $super+g mode "gaps"
 
 # panel
 bar {
