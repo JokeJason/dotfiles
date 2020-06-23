@@ -41,11 +41,6 @@ bindsym $super+Down focus down
 bindsym $super+Up focus up
 bindsym $super+Right focus right
 
-bindsym $super+h focus left
-bindsym $super+j focus down
-bindsym $super+k focus up
-bindsym $super+l focus right
-
 # move focused window
 bindsym $super+Shift+Left move left
 bindsym $super+Shift+Down move down
