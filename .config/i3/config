@@ -17,7 +17,8 @@ floating_modifier $super
 # Autostart (GENERAL)
 exec --no-startup-id xsettingsd &
 exec --no-startup-id compton -b
-exec --no-startup-id ibus-daemon &
+exec --no-startup-id ibus-daemon -d
+exec --no-startup-id xrdb ~/.Xresources
 
 # start a terminal
 bindsym $super+Return exec urxvt # previously it's i3-sensible-terminal
@@ -41,17 +42,27 @@ bindsym $super+Down focus down
 bindsym $super+Up focus up
 bindsym $super+Right focus right
 
+bindsym $super+h focus left
+bindsym $super+j focus down
+bindsym $super+i focus up
+bindsym $super+l focus right
+
 # move focused window
 bindsym $super+Shift+Left move left
 bindsym $super+Shift+Down move down
 bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
 
+bindsym $super+n move left
+bindsym $super+m move down
+bindsym $super+k move up
+bindsym $super+. move right
+
 # split in horizontal orientation
-bindsym $super+h split h
+bindsym $super+Shift+h split h
 
 # split in vertical orientation
-bindsym $super+v split v
+bindsym $super+Shift+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $super+f fullscreen toggle
