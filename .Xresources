@@ -22,6 +22,10 @@ URxvt*saveline:			15000
 URxvt*termName:			rxvt-unicode-256color
 URxvt*urgentOnBell:		true
 URxvt.mouseWheelScrollPage: 	False 
+! scroll in relation to buffer (with mouse croll or Shift+Page Up)
+URxvt.scrollWithBuffer: true
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
 
 ! appearance
 URxvt*depth:			5
