@@ -44,7 +44,7 @@ bindsym $super+Right focus right
 
 bindsym $super+h focus left
 bindsym $super+j focus down
-bindsym $super+i focus up
+bindsym $super+k focus up
 bindsym $super+l focus right
 
 # move focused window
@@ -52,11 +52,6 @@ bindsym $super+Shift+Left move left
 bindsym $super+Shift+Down move down
 bindsym $super+Shift+Up move up
 bindsym $super+Shift+Right move right
-
-bindsym $super+n move left
-bindsym $super+m move down
-bindsym $super+k move up
-bindsym $super+. move right
 
 # split in horizontal orientation
 bindsym $super+Shift+h split h
